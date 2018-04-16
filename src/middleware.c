@@ -3203,7 +3203,7 @@ char *manageSendLocalListRequest(const char *UniqueId_str, int version, json_obj
 				{
 					status_str=json_object_get_string(obj_status);
 
-					for (int i=0; i<sizeof(AuthorizationStatusTexts); i++)
+					for (int i=0; i<sizeof(AuthorizationStatusTexts)/sizeof(AuthorizationStatusTexts[0]); i++)
 					{
 						if (strcmp(AuthorizationStatusTexts[i],status_str)) status=i;
 					}
